@@ -13,7 +13,7 @@ ul, li {
 
 a {
     text-decoration: none;
-    color: #343434;
+    color: #4384fe;
 }
 
 mark {
@@ -22,12 +22,12 @@ mark {
 }
 
 body .container {
-    padding: 0 20%;
+    width: 100%;
+    max-width: 50rem;
     margin: 0 auto;
 }
 
 body .container section {
-    display: flex;
     padding: 40px 0;
     border-bottom: 2px solid #343434;
 }
@@ -38,19 +38,67 @@ body .container section h1 {
 
 body .container section h2 {
     font-size: 2rem;
+    margin-bottom: 40px;
 }
 
-body .container section .right-side {
+body .container section h3 {
+    font-size: 1.4rem;
+}
+
+body .container section h4 {
+    font-size: 1.2rem;
+    margin: 20px 0 5px;
+}
+
+body .container section .row {
+    display: flex;
+}
+
+body .container section .introduction {
+    font-size: 1.5rem;
+}
+
+body .container section .row-left {
+    flex-basis: 15rem;
+}
+
+body .container section .row-left .experience-detail {
+    margin-top: 10px;
+}
+
+body .container section .row-right {
     flex: 1;
     text-align: right;
     margin: auto;
 }
 
-body .container section .right-side em {
+body .container section .row-right em {
     font-style: normal;
     font-weight: 600;
 }
 
-body .container section .introduction {
-    font-size: 1.5rem;
+body .container section .row-right.experience {
+    text-align: left;
+    margin: unset;
+}
+
+body .container section .row-right .experience-wrapper::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 70px;
+}
+
+body .container section .row-right .experience-wrapper:last-child::after {
+    height: unset;
+}
+
+body .container section .skills-wrapper {
+
+}
+
+body .container section .skills-wrapper .skills-list li::before {
+    display: inline-block;
+    content: '•';
+    color: #4384fe;
 }
