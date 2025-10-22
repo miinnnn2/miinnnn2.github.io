@@ -1,0 +1,12 @@
+.item {
+  position: relative;
+  padding-left: 1rem;
+
+  &::before {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    content: '•';
+    color: #4384fe;
+  }
+}
