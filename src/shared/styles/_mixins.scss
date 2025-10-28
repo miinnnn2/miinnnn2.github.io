@@ -1,0 +1,14 @@
+@use 'breakpoints' as *;
+@use 'sass:map';
+
+@mixin media($breakpoint) {
+  $size: map.get($breakpoints, $breakpoint);
+
+  @if size {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "🚨 '#{$breakpoint}'는 정의된 브레이크포인트가 아닙니다.";
+  }
+}
