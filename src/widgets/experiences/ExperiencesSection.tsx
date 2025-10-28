@@ -1,18 +1,26 @@
+'use client';
+
 import ExperienceItem from '@entities/experiences/ui/ExperienceItem';
-import { EXPERIENCES } from '@shared/config/experiences';
+import { experiencesQuery } from '@features/experiences/model/hooks';
 import Spacer from '@shared/ui/spacer/Spacer';
 import styles from './ExperiencesSection.module.scss';
 
 const ExperiencesSection = () => {
+  const { data, isFetching } = experiencesQuery.useGetExperienceList();
+
   return (
     <section>
       <h2>Work Experiences.</h2>
       <Spacer height="7rem" />
-      <div className={styles.list}>
-        {EXPERIENCES.map((experience) => (
-          <ExperienceItem key={experience.company} experience={experience} />
-        ))}
-      </div>
+      {isFetching ? (
+        <div>Loading...</div>
+      ) : (
+        <div className={styles.list}>
+          {data?.experiences?.map((experience) => (
+            <ExperienceItem key={experience.company} experience={experience} />
+          ))}
+        </div>
+      )}
     </section>
   );
 };
