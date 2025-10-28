@@ -73,7 +73,7 @@ h4 {
 
 section {
   padding: 3.2rem 0;
-  border-bottom: 0.2rem solid #343434;
+  border-bottom: 0.2rem solid var(--border-primary);
 }
 
 @media (prefers-color-scheme: dark) {

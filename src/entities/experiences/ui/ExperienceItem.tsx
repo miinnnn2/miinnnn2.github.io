@@ -13,12 +13,12 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => {
       </div>
       <ul className={styles.list}>
         {experience.projects.map((project) => (
-          <li key={project.title} className={styles.list}>
-            <h3>{project.title}</h3>
+          <li key={project.title} className={styles.listItem}>
+            <h3 className={styles.title}>{project.title}</h3>
             <h4 className={styles.subTitle}>Description.</h4>
             <p>{project.description}</p>
             <h4 className={styles.subTitle}>Tech Stacks.</h4>
-            <p>{project.techStack}</p>
+            <p>{project.techStacks.join(', ')}</p>
           </li>
         ))}
       </ul>

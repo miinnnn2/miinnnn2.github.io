@@ -1,3 +1,5 @@
+@use '@shared/styles/mixins' as *;
+
 .container {
   display: flex;
 
@@ -6,14 +8,42 @@
     flex-shrink: 0;
   }
 
+  .title {
+    color: var(--color-primary);
+  }
+
   .subTitle {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
 
   .list {
-    &:not(:last-of-type) {
-      margin-bottom: 7rem;
+    .listItem {
+      &:not(:last-of-type) {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    flex-direction: column;
+
+    .company {
+      flex-basis: 0;
+    }
+
+    .list {
+      margin-top: 2rem;
+
+      .listItem {
+        padding: 2rem;
+        background-color: var(--bg-primary);
+        border-radius: 1rem;
+
+        &:not(:last-of-type) {
+          margin-bottom: 3rem;
+        }
+      }
     }
   }
 }

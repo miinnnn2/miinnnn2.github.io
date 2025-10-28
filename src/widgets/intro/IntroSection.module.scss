@@ -1,12 +1,33 @@
+@use '@shared/styles/mixins' as *;
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 3.2rem;
+
+  @include media(tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .badges {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 1.8rem;
+    }
+  }
 }
 
 .content {
   font-size: 2.4rem;
-  border-top: 0.2rem solid #343434;
+  border-top: 0.2rem solid var(--border-primary);
   padding-top: 3.2rem;
+
+  @include media(tablet) {
+    font-size: 2rem;
+  }
 }
