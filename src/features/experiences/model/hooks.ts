@@ -6,7 +6,7 @@ export const experiencesQuery = {
   useGetExperienceList: () => {
     return useQuery({
       queryKey: experiencesKeys.list,
-      queryFn: () => experiencesAPI.getExperienceList(),
+      queryFn: () => experiencesAPI.getExperienceListClient(),
     });
   },
 };

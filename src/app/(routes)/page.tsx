@@ -14,7 +14,7 @@ export default async function Home() {
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery({
     queryKey: experiencesKeys.list,
-    queryFn: () => experiencesAPI.getExperienceList(),
+    queryFn: () => experiencesAPI.getExperienceListServer(),
   });
 
   return (
