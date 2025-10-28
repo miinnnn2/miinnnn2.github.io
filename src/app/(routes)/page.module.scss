@@ -1,0 +1,29 @@
+@use '@shared/styles/mixins' as *;
+
+.page {
+  --color-primary: #4384fe;
+  --bg-primary: #f3f3f3;
+  --border-primary: #343434;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100svh;
+  padding: 8rem;
+  font-family: var(--font-geist-sans);
+
+  @include media(tablet) {
+    padding: 3rem;
+  }
+}
+
+.main {
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --color-primary: #99ceff;
+    --bg-primary: #303030;
+  }
+}

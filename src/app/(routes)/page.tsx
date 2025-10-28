@@ -1,7 +1,7 @@
 import ExperiencesSection from '@widgets/experiences/ExperiencesSection';
 import IntroSection from '@widgets/intro/IntroSection';
 import SkillsSection from '@widgets/skills/SkillsSection';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 export default function Home() {
   return (
