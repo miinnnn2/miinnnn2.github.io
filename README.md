@@ -19,13 +19,6 @@ Github Actions를 이용하여 Github Pages에 배포하였습니다.
  </div>
  <br/>
 
-## Main Sections
-
-- IntroSection: 이름/한 줄 소개/키워드
-- ExperiencesSection: 회사·역할·기간·프로젝트 목록 (링크/스택)
-- SkillsSection: 보유 기술(카테고리 + 키워드 + 간단 설명)
-  <br/>
-
 ## Project Structure
 
 ```
