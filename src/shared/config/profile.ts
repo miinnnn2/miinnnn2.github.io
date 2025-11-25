@@ -3,6 +3,7 @@ export const PROFILE = {
   badges: [
     '# 프론트엔드 개발자',
     '# 6년차',
+    '# https://github.com/miinnnn2',
     '# miinnnn2@gmail.com',
     '# 01033872844',
   ],
